@@ -16,12 +16,12 @@ int main(){
 //	insertFirst(&vh, &l, (NameType){"Jane", '6', "Smith"});
 
 //	INSERT LAST FUNCTION
-//	insertLast(&vh, &l, (NameType){"Jovence", '1', "Lim"});
-//	insertLast(&vh, &l, (NameType){"John", '2', "Doe"});
-//	insertLast(&vh, &l, (NameType){"Jane", '3', "Doe"});
-//	insertLast(&vh, &l, (NameType){"Sam", '4', "Smith"});
-//	insertLast(&vh, &l, (NameType){"John", '5', "Lennon"});
-//	insertLast(&vh, &l, (NameType){"Jane", '6', "Smith"});
+	insertLast(&vh, &l, (NameType){"Jovence", '1', "Lim"});
+	insertLast(&vh, &l, (NameType){"John", '2', "Doe"});
+	insertLast(&vh, &l, (NameType){"Jane", '3', "Doe"});
+	insertLast(&vh, &l, (NameType){"Sam", '4', "Smith"});
+	insertLast(&vh, &l, (NameType){"John", '5', "Lennon"});
+	insertLast(&vh, &l, (NameType){"Jane", '6', "Smith"});
 	displayList(vh, l);
 	return 0;
 }
