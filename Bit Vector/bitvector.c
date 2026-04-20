@@ -6,7 +6,7 @@ void initialize(SET *S);
 void insert(SET *S, int element);
 void delete(SET *S, int element);
 bool find(SET S, int element);
-void display(SET S);
+void displayBits(SET S);
 
 int main(){
     SET s;
@@ -14,8 +14,7 @@ int main(){
     insert(&s, 5);
     insert(&s, 6);
     insert(&s, 7);
-    find(s, 5);
-    display(s);
+    displayBits(s);
     return 0;
 }
 
@@ -42,12 +41,10 @@ bool find(SET S, int element){
     return (S & bitmask)? true:false;
 }
 
-void display(SET S){
-    printf("SET: { ");
-    for(int i = 0; i <= sizeof(SET)-1; i++){
-        if(find(S, i)){
-            printf("%d ", i);
-        }
+void displayBits(SET S){
+    for(int i = 7; i >= 0; i--){
+        SET bitmask = 1 << i;
+        printf("%d", (S & bitmask) ? 1 : 0);
     }
-    printf("}\n");
+    printf("\n");
 }
